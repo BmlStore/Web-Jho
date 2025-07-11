@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHONATAN STORE | Premium Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+        }
+        .neon-text {
+            text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+        }
+        .neon-border {
+            border: 1px solid #00ff00;
+            box-shadow: 0 0 5px #00ff00, 0 0 10px rgba(0, 255, 0, 0.3);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+        .glitch {
+            position: relative;
+        }
+        .glitch::before, .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff00ff;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 #00ffff;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
+        @keyframes glitch-anim {
+            0% { clip: rect(31px, 9999px, 94px, 0); }
+            20% { clip: rect(112px, 9999px, 76px, 0); }
+            40% { clip: rect(75px, 9999px, 107px, 0); }
+            60% { clip: rect(42px, 9999px, 130px, 0); }
+            80% { clip: rect(98px, 9999px, 114px, 0); }
+            100% { clip: rect(14px, 9999px, 108px, 0); }
+        }
+        @keyframes glitch-anim2 {
+            0% { clip: rect(65px, 9999px, 119px, 0); }
+            20% { clip: rect(25px, 9999px, 145px, 0); }
+            40% { clip: rect(87px, 9999px, 129px, 0); }
+            60% { clip: rect(23px, 9999px, 82px, 0); }
+            80% { clip: rect(53px, 9999px, 64px, 0); }
+            100% { clip: rect(58px, 9999px, 151px, 0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-12">
+            <div class="glitch" data-text="JHONATAN STORE">
+                <h1 class="neon-text text-3xl font-bold">JHONATAN STORE</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-green-400 transition">HOME</a></li>
+                    <li><a href="#products" class="hover:text-green-400 transition">PRODUCTS</a></li>
+                    <li><a href="#payment" class="hover:text-green-400 transition">PAYMENT</a></li>
+                    <li><a href="#contact" class="hover:text-green-400 transition">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="mb-20 relative overflow-hidden rounded-lg">
+            <div class="absolute inset-0 bg-black opacity-70"></div>
+            <div class="relative z-10 py-24 px-8 text-center">
+                <h2 class="neon-text text-5xl font-bold mb-6 animate__animated animate__fadeIn">WELCOME TO THE JHONATAN MARKET</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Premium digital marketplace with safe and anonymous transactions</p>
+                <button class="neon-border bg-black hover:bg-green-900 text-white px-8 py-3 rounded-md font-bold transition-all duration-300 hover:scale-105">
+                    ENTER THE MARKET
+                </button>
+            </div>
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9632ce7a-f8b9-43f5-b8cc-225a4206d102.png" alt="Futuristic cyberspace digital background with glowing green matrix code and circuit patterns" class="absolute inset-0 w-full h-full object-cover -z-10" />
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 border-b-2 border-green-500 pb-2 inline-block">OUR DIGITAL PRODUCTS</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card neon-border bg-gray-900 rounded-lg p-6 transition-all duration-300">
+                    <div class="mb-4 relative overflow-hidden rounded-md h-48">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/13fb7fa7-cdcd-45dd-84e8-6b93e7f8997a.png" alt="Premium software package glowing on dark background" class="w-full h-full object-cover" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                            <span class="bg-green-900 text-xs text-white px-2 py-1 rounded">DIGITAL</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">JASA BAN WA</h3>
+                    <p class="text-gray-400 mb-4">Layanan ban nomor WhatsApp khusus</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-400 font-bold">Rp2.000</span>
+                        <button class="bg-green-900 hover:bg-green-700 text-white px-4 py-2 rounded text-sm transition">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card neon-border bg-gray-900 rounded-lg p-6 transition-all duration-300">
+                    <div class="mb-4 relative overflow-hidden rounded-md h-48">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4b1e9598-e9f0-4544-aa71-4e3d30bded2a.png" alt="Digital security VPN service icon with shield protection" class="w-full h-full object-cover" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                            <span class="bg-green-900 text-xs text-white px-2 py-1 rounded">SERVICE</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">JASA BUG WA</h3>
+                    <p class="text-gray-400 mb-4">Layanan bug pada akun whatsapp</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-400 font-bold">Rp5.000</span>
+                        <button class="bg-green-900 hover:bg-green-700 text-white px-4 py-2 rounded text-sm transition">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card neon-border bg-gray-900 rounded-lg p-6 transition-all duration-300">
+                    <div class="mb-4 relative overflow-hidden rounded-md h-48">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c46da28a-b7b1-4aee-8c6b-c8da7f554975.png" alt="Digital art collection with cyberpunk neon aesthetic" class="w-full h-full object-cover" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                            <span class="bg-green-900 text-xs text-white px-2 py-1 rounded">ART</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">CHEAT SAMP ANTI DETECT</h3>
+                    <p class="text-gray-400 mb-4">Cheat untuk game SAMP dengan sistem anti detect</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-400 font-bold">Rp20.000</span>
+                        <button class="bg-green-900 hover:bg-green-700 text-white px-4 py-2 rounded text-sm transition">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card neon-border bg-gray-900 rounded-lg p-6 transition-all duration-300">
+                    <div class="mb-4 relative overflow-hidden rounded-md h-48">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3e9918d8-fba0-45fd-a5ff-789bf65d392f.png" alt="User control panel creation service" class="w-full h-full object-cover" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                            <span class="bg-green-900 text-xs text-white px-2 py-1 rounded">SERVICE</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">JASA BUAT UCP</h3>
+                    <p class="text-gray-400 mb-4">Pembuatan user control panel untuk kebutuhan samp</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-400 font-bold">Rp2.000</span>
+                        <button class="bg-green-900 hover:bg-green-700 text-white px-4 py-2 rounded text-sm transition">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <!-- Product 5 -->
+                <div class="product-card neon-border bg-gray-900 rounded-lg p-6 transition-all duration-300">
+                    <div class="mb-4 relative overflow-hidden rounded-md h-48">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/df0c559c-481f-41ef-a038-b4f1b8def387.png" alt="Murban service logo" class="w-full h-full object-cover" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                            <span class="bg-green-900 text-xs text-white px-2 py-1 rounded">SERVICE</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">MURBAN</h3>
+                    <p class="text-gray-400 mb-4">Layanan ban WhatsApp Khusus</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-400 font-bold">Rp15.000</span>
+                        <button class="bg-green-900 hover:bg-green-700 text-white px-4 py-2 rounded text-sm transition">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card neon-border bg-gray-900 rounded-lg p-6 transition-all duration-300">
+                    <div class="mb-4 relative overflow-hidden rounded-md h-48">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/03abffaf-b3d9-4927-b7d3-ecb2a6473e1e.png" alt="Murbug service logo" class="w-full h-full object-cover" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                            <span class="bg-green-900 text-xs text-white px-2 py-1 rounded">SERVICE</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">MURBUG</h3>
+                    <p class="text-gray-400 mb-4">Layanan Bug akun multiple dengan sistem khusus</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-400 font-bold">Rp10.000</span>
+                        <button class="bg-green-900 hover:bg-green-700 text-white px-4 py-2 rounded text-sm transition">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Payment Section -->
+        <section id="payment" class="mb-20 neon-border bg-gray-900 rounded-lg p-8">
+            <h2 class="text-3xl font-bold mb-6 border-b-2 border-green-500 pb-2 inline-block">PAYMENT METHODS</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-green-400">VIA DANA</h3>
+                    <p class="mb-4">Fast and secure payment through Dana wallet:</p>
+                    
+                    <div class="bg-gray-800 p-6 rounded-lg mb-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/71a97367-981e-46b2-a7c5-b2d7f5be6272.png" alt="Dana payment logo green holographic icon" class="w-12 h-12 mr-4" />
+                            <div>
+                                <h4 class="font-bold">JHONATAN STORE</h4>
+                                <p class="text-sm text-gray-400">Verified Merchant</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-gray-400">Payment Number:</span>
+                                <span class="font-mono">085756372731</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-400">Payment Name:</span>
+                                <span>JHONATAN STORE</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-sm text-gray-400">* Please include your order ID in the payment note for faster processing</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-green-400">CRYPTO PAYMENTS</h3>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-gray-800 p-4 rounded-lg flex items-center">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/652fd93b-95f7-4707-a6cc-a8bb409d3036.png" alt="Bitcoin crypto currency orange logo" class="w-6 h-6 mr-2" />
+                            <span>Bitcoin (BTC)</span>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg flex items-center">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8a8493ff-6af0-4991-9a89-8ae35ad086a7.png" alt="Ethereum purple crypto currency symbol" class="w-6 h-6 mr-2" />
+                            <span>Ethereum (ETH)</span>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg flex items-center">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/944d715a-1b72-47fc-8393-bdfa2442fee2.png" alt="USDT Tether stablecoin blue logo" class="w-6 h-6 mr-2" />
+                            <span>USDT</span>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg flex items-center">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/02bb6795-b26a-4e72-908b-a4bc340618d1.png" alt="Litecoin silver cryptocurrency symbol" class="w-6 h-6 mr-2" />
+                            <span>Litecoin (LTC)</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400">* Crypto payments are anonymous and irreversible. Double-check addresses before sending.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 border-b-2 border-green-500 pb-2 inline-block">CONTACT SECURELY</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ENCRYPTED MESSAGE</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-1">Your Email (optional)</label>
+                            <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-2 focus:outline-none focus:ring-1 focus:ring-green-500" placeholder="secure@protonmail.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                            <textarea id="message" rows="5" class="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-2 focus:outline-none focus:ring-1 focus:ring-green-500" placeholder="Type your encrypted message here..."></textarea>
+                        </div>
+                        <button type="submit" class="neon-border bg-black hover:bg-green-900 text-white px-6 py-2 rounded-md font-bold transition">
+                            SEND SECURELY
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="neon-border bg-gray-900 rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">SECURE CHANNELS</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-green-400">PROTONMAIL</h4>
+                            <p class="text-sm">jhonatan.store@protonmail.com</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-green-400">TELEGRAM</h4>
+                            <p class="text-sm">@jhonatan_store_bot</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-green-400">SIGNAL</h4>
+                            <p class="text-sm">+6285756372731</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-700">
+                        <h4 class="font-bold mb-2">PGP PUBLIC KEY</h4>
+                        <div class="bg-gray-800 p-4 rounded-md overflow-x-auto">
+                            <code class="text-xs whitespace-pre">
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+                            
+mQGNBGS4KFIBDAC5fCbZQjD8yVXW4c6U4Z4sN3J7fJyHq3m2+9Ij1NLYwKXJ9Ig6
+t2fK7pCKwZQk8N4v9k6wS9q5p7a01Bb8j3jJ5Qd7zPZ5H9Q7nJVlLwT3nq1U3c35
+0L8Y5Nw4fW4q6h2r8Jw3x3v8w8v6SbGdZ5J4z4G+
+... [REDACTED FOR SECURITY] ...
+=E3hN
+-----END PGP PUBLIC KEY BLOCK-----
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pt-8 border-t border-gray-800">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                <div class="mb-4 md:mb-0">
+         
